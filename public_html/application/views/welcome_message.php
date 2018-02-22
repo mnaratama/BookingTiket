@@ -111,53 +111,63 @@
                                     <div class="tab-content">
                                         <div class="tab-content-inner active" data-content="signup">
                                             <h3>Book Your Trip:</h3>
-                                            <form action="#">
+                                            <form action="<?php echo base_url('crud/tambahdata_aksi'); ?>" method="post">
                                                 <div class="row form-group">
                                                     <div class="col-md-12">
-                                                        <label for="activities">Origin:</label>
-                                                        <select name="#" id="activities" class="form-control">
-                                                            <option value="">Surabaya</option>
-                                                            <option value="">Solo</option>
-                                                            <option value="">Jogja</option>
-                                                            <option value="">Jakarta</option>
+                                                        <label for="origin">Origin:</label>
+                                                        <select name="rute_from" id="origin" class="form-control">
+                                                            <option value="Surabaya">Surabaya</option>
+                                                            <option value="Solo">Solo</option>
+                                                            <option value="Jogja">Jogja</option>
+                                                            <option value="Jakarta">Jakarta</option>
                                                         </select>
                                                     </div>
                                                 </div>
                                                 <div class="row form-group">
                                                     <div class="col-md-12">
                                                         <label for="destination">Destination:</label>
-                                                        <select name="#" id="destination" class="form-control">
-                                                            <option value="">Surabaya</option>
-                                                            <option value="">Solo</option>
-                                                            <option value="">Jogja</option>
-                                                            <option value="">Jakarta</option>
+                                                        <select name="rute_to" id="destination" class="form-control">
+                                                            <option value="Surabaya">Surabaya</option>
+                                                            <option value="Solo">Solo</option>
+                                                            <option value="Jogja">Jogja</option>
+                                                            <option value="Jakarta">Jakarta</option>
                                                         </select>
                                                     </div>
                                                 </div>
                                                 
                                                 <div class="row form-group">
                                                     <div class="col-md-12">
-                                                        <label for="date-start">Date Travel:</label>
-                                                        <input type="text" id="date-start" class="form-control">
+                                                        <label for="depart">Date Travel:</label>
+                                                        <input type="text" name="depart_at" id="date-start" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="row form-group">
+                                                    <div class="col-md-12">
+                                                        <label for="price">Price:</label>
+                                                        <select name="price" id="price" class="form-control">
+                                                            <option value="Rp.250.000">Rp.250.000</option>
+                                                            <option value="Rp.500.000">Rp.500.000</option>
+                                                            <option value="Rp.750.000">Rp.750.000</option>
+                                                            <option value="Rp.1.000.000">Rp.1.000.000</option>
+                                                        </select>
                                                     </div>
                                                 </div>
 
                                                 <div class="row form-group">
                                                     <div class="col-md-12">
-                                                        <label for="date-start">No. of Passengers:</label>
-                                                        <input type="number" min="0" value="2" class="form-control">
+                                                        <label for="No. of Passengers">No. of Passengers:</label>
+                                                        <input type="number" name="rute_to" min="0" value="2" class="form-control">
                                                     </div>
                                                 </div>
 
                                                 <div class="row form-group">
                                                     <div class="col-md-12">
-                                                        <input type="Search" class="btn btn-primary btn-block" value="Search">
+                                                        <input type="submit" class="btn btn-primary btn-block" value="Search Flight">
                                                     </div>
                                                 </div>
                                             </form> 
                                         </div>
 
-                                        
                                     </div>
                                 </div>
                             </div>

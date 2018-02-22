@@ -52,5 +52,5 @@ class Admin extends CI_Controller {
 		$data['tb_reservation']= $this->m_data->tampil_data_reservation()->result();
 		$data['title']= "Data reservation";
 		$this->load->view('v_admin_data_reservation',$data);
-	}
+	}	
 }

@@ -15,7 +15,24 @@ class Crud extends CI_Controller{
 		// $this->load->view('v_admin',$data);
 		redirect('admin');
 	}
- 
+ // Book Your Trip
+	function tambahdata_aksi(){
+
+		$rute_from = $this->input->post('rute_from');
+		$rute_to = $this->input->post('rute_to');
+		$depart = $this->input->post('depart_at');
+		$price = $this->input->post('price');
+		$data = array(
+			'rute_from' => $rute_from,
+			'rute_to' => $rute_to,
+			'depart_at' => $depart,
+			'price' => $price
+			);
+
+		$this->m_data->input_data($data,'tb_rute');
+		redirect('admin/data_rute');
+	}
+
  // DATA USER
 	function tambah(){
 		$data['title'] = "Tambah User";
