@@ -125,8 +125,8 @@
                                                 </div>
                                                 <div class="row form-group">
                                                     <div class="col-md-12">
-                                                        <label for="destination">Destination:</label>
-                                                        <select name="rute_to" id="destination" class="form-control">
+                                                        <label for="Destination">Destination:</label>
+                                                        <select name="rute_to" id="Destination" class="form-control">
                                                             <option value="Surabaya">Surabaya</option>
                                                             <option value="Solo">Solo</option>
                                                             <option value="Jogja">Jogja</option>
@@ -145,10 +145,10 @@
                                                     <div class="col-md-12">
                                                         <label for="price">Price:</label>
                                                         <select name="price" id="price" class="form-control">
-                                                            <option value="Rp.250.000">Rp.250.000</option>
-                                                            <option value="Rp.500.000">Rp.500.000</option>
-                                                            <option value="Rp.750.000">Rp.750.000</option>
-                                                            <option value="Rp.1.000.000">Rp.1.000.000</option>
+                                                            <option value="250000">Rp.250.000</option>
+                                                            <option value="500000">Rp.500.000</option>
+                                                            <option value="750000">Rp.750.000</option>
+                                                            <option value="1000000">Rp.1.000.000</option>
                                                         </select>
                                                     </div>
                                                 </div>
@@ -156,7 +156,7 @@
                                                 <div class="row form-group">
                                                     <div class="col-md-12">
                                                         <label for="No. of Passengers">No. of Passengers:</label>
-                                                        <input type="number" name="rute_to" min="0" value="2" class="form-control">
+                                                        <input type="number" name="passengers" min="0" value="2" class="form-control">
                                                     </div>
                                                 </div>
 

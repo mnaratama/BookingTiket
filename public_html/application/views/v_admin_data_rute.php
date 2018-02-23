@@ -40,6 +40,7 @@
                       <th>Rute from</th>
                       <th>Rute to</th>
                       <th>Price</th>
+                      <th>No. of Passengers</th>
                       <th>Transportation id</th>
                       <th>What will you do ?</th>
                     </tr>
@@ -52,6 +53,7 @@
                       <td><?php echo $rute->rute_from; ?></td>
                       <td><?php echo $rute->rute_to; ?></td>
                       <td><?php echo $rute->price; ?></td>
+                      <td><?php echo $rute->passengers; ?></td>
                       <td><?php echo $rute->transportation_id; ?></td>
                       <td>
                         <a href=<?php echo base_url("crud/edit_rute/".$rute->id); ?> class="btn btn-primary a-btn-slide-text">
