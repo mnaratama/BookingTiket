@@ -52,6 +52,10 @@
                     <option value="1000000">Rp 1.000.000</option>
                   </select>
                 </div>
+                <div class="form-group">
+                  <label >No. of Passengers</label>
+                  <input type="text" class="form-control" name="passengers"/>
+                </div>
               </div>
               <!-- /.box-body -->
               <div class="box-footer">

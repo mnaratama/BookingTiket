@@ -172,11 +172,13 @@ class Crud extends CI_Controller{
 	$rute_f = $this->input->post('rute_from');
 	$rute_t = $this->input->post('rute_to');
 	$price = $this->input->post('price');
+	$passengers = $this->input->post('passengers');
 	$data = array(
 		'depart_at' => $depart,
 		'rute_from' => $rute_f,
 		'rute_to' => $rute_t,
-		'price' => $price
+		'price' => $price,
+		'passengers' => $passengers
 	);
  
 	$where = array(
@@ -193,11 +195,13 @@ class Crud extends CI_Controller{
 	$rute_f = $this->input->post('rute_from');
 	$rute_t = $this->input->post('rute_to');
 	$price = $this->input->post('price');
+	$passengers = $this->input->post('passengers');
 	$data = array(
 		'depart_at' => $depart,
 		'rute_from' => $rute_f,
 		'rute_to' => $rute_t,
-		'price' => $price
+		'price' => $price,
+		'passengers' => $passengers
 	);
 
 		$this->m_data->input_data($data,'tb_rute');
@@ -224,94 +228,82 @@ class Crud extends CI_Controller{
 	}
 	function update_transportation(){
 	$id = $this->input->post('id');
-	$name = $this->input->post('name');
-	$address = $this->input->post('address');
-	$phone = $this->input->post('phone');
-	$gender = $this->input->post('gender');
+	$code = $this->input->post('code');
+	$desc = $this->input->post('description');
+	$seat_q = $this->input->post('seat_qty');
+	$transportation_type_id = $this->input->post('transportation_type_id');
 	$data = array(
-		'name' => $name,
-		'address' => $address,
-		'phone' => $phone,
-		'gender' => $gender
+		'code' => $code,
+		'description' => $desc,
+		'seat_qty' => $seat_q,
+		'transportation_type_id' => $transportation_type_id
 	);
  
 	$where = array(
 		'id' => $id
 	);
 
-	$this->m_data->update_data($where,$data,'tb_customer');
-	redirect('admin/data_customer');
+	$this->m_data->update_data($where,$data,'tb_transportation');
+	redirect('admin/data_transportation');
 	}
 	
 	function tambah_transportation_aksi(){
 
-		$name = $this->input->post('name');
-	$address = $this->input->post('address');
-	$phone = $this->input->post('phone');
-	$gender = $this->input->post('gender');
+	$code = $this->input->post('code');
+	$desc = $this->input->post('description');
+	$seat_q = $this->input->post('seat_qty');
+	$transportation_type_id = $this->input->post('transportation_type_id');
 	$data = array(
-		'name' => $name,
-		'address' => $address,
-		'phone' => $phone,
-		'gender' => $gender
+		'code' => $code,
+		'description' => $desc,
+		'seat_qty' => $seat_q,
+		'transportation_type_id' => $transportation_type_id
 	);
 
-		$this->m_data->input_data($data,'tb_customer');
-		redirect('admin/data_customer');
+		$this->m_data->input_data($data,'tb_transportation');
+		redirect('admin/data_transportation');
 	}
 	
 
 // DATA Transportation Type
 	function tambah_transportation_type(){
-		$data['title'] = "Tambah Customer";
-		$this->load->view('v_admin_data_tambah_customer',$data);
+		$data['title'] = "Tambah Transportation Type";
+		$this->load->view('v_admin_data_transportation_type',$data);
 	}
 	function hapus_transportation_type($id){
 		$where = array('id' => $id);
-		$this->m_data->hapus_data($where,'tb_customer');
-		redirect('admin/data_customer');
+		$this->m_data->hapus_data($where,'tb_transportation_type');
+		redirect('admin/data_transportation_type');
 	}
 	function edit_transportation_type($id){
 		$where = array('id' => $id);
-		$data['tb_customer'] = $this->m_data->edit_data($where,'tb_customer')->result();
-		$this->load->view('v_admin_data_edit_customer',$data);
+		$data['tb_transportation_type'] = $this->m_data->edit_data($where,'tb_transportation_type')->result();
+		$this->load->view('v_admin_data_edit_transportation_type',$data);
 	}
 	function update_transportation_type(){
 	$id = $this->input->post('id');
-	$name = $this->input->post('name');
-	$address = $this->input->post('address');
-	$phone = $this->input->post('phone');
-	$gender = $this->input->post('gender');
+	$desc = $this->input->post('description');
 	$data = array(
-		'name' => $name,
-		'address' => $address,
-		'phone' => $phone,
-		'gender' => $gender
+		'description' => $desc
 	);
  
 	$where = array(
 		'id' => $id
 	);
 
-	$this->m_data->update_data($where,$data,'tb_customer');
-	redirect('admin/data_customer');
+	$this->m_data->update_data($where,$data,'tb_transportation_type');
+	redirect('admin/data_transportation_type');
 	}
 	
 	function tambah_transportation_type_aksi(){
 
-		$name = $this->input->post('name');
-	$address = $this->input->post('address');
-	$phone = $this->input->post('phone');
-	$gender = $this->input->post('gender');
+	$desc = $this->input->post('description');
 	$data = array(
-		'name' => $name,
-		'address' => $address,
-		'phone' => $phone,
-		'gender' => $gender
+		'description' => $desc
 	);
 
-		$this->m_data->input_data($data,'tb_customer');
-		redirect('admin/data_customer');
+		$this->m_data->input_data($data,'tb_transportation_type');
+		redirect('admin/data_transportation_type	');
 	}	
 
 	// DATA Reservation

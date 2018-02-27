@@ -25,7 +25,7 @@
             <div class="box">
               <div class="box-header">
                 <h3 class="box-title">Data Transportation Type</h3>     
-                  <a href=<?php echo base_url("crud/tambah_transportation_type/"); ?> class="btn btn-primary a-btn-slide-text" style="position:absolute;right:0;margin-right:10px; ">
+                  <a href=<?php echo base_url("crud/tambah_transportation_type_aksi/"); ?> class="btn btn-primary a-btn-slide-text" style="position:absolute;right:0;margin-right:10px; ">
                           <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
                           <span><strong>Add</strong></span>            
                         </a>
